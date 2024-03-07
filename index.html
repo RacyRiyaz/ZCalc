@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="sipStyles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap">
+  <style>
+   body {
+  background-image: url('https://github.com/RacyRiyaz/ZCalc/blob/main/BGSB.png');
+  background-size: cover; /* Adjusts the background image to cover the entire body */
+  background-repeat: no-repeat; /* Prevents the background image from repeating */
+  font-family: Arial, sans-serif; /* Set your preferred font family */
+}
+
+  </style>
+</head>
+  <header>
+    <h1>ZCalc</h1>
+  </header>
+
+  <main>
+    <div id="sipCalculator" class="tabcontent">
+      <div class="calculator">
+        <h2>SIP Calculator</h2>
+        <label for="sipInvestmentAmount">Monthly Investment Amount:</label>
+        <input type="text" id="sipInvestmentAmount" placeholder="Enter investment amount" value="25,000" oninput="this.value = formatNumberWithCommas(this.value)">
+        
+        <label for="sipRateOfInterest">Expected Rate of Return (%):</label>
+        <input type="number" id="sipRateOfInterest" placeholder="Enter rate of interest" value="12">
+        
+        <label for="sipInvestmentPeriod">Investment Period (years):</label>
+        <input type="number" id="sipInvestmentPeriod" placeholder="Enter investment period" value="10">
+        
+        <button onclick="calculateSIP()">Calculate</button>
+        
+        <div id="sipResult"></div>
+      </div>
+    </div>
+
+    <div id="lumpsumCalculator" class="tabcontent">
+      <div class="calculator">
+        <h2>Lumpsum Calculator</h2>
+        <label for="lumsumpAmount">Investment Amount:</label>
+        <input type="text" id="lumsumpAmount" placeholder="Enter Lumpsum amount" value="50,00,000" oninput="this.value = formatNumberWithCommas(this.value)">
+        
+        <label for="rateOfInterest">Expected Rate of Return (%):</label>
+        <input type="number" id="rateOfInterest" placeholder="Enter rate of interest" value="12">
+        
+        <label for="investmentPeriod">Investment Period (years):</label>
+        <input type="number" id="investmentPeriod" placeholder="Enter investment period" value="10">
+        
+        <button onclick="calculateLumpsum()">Calculate</button>
+        
+        <div id="lumsumpResult"></div>
+      </div>
+    </div>
+
+    <div id="swpCalculator" class="tabcontent">
+      <div class="calculator">
+        <h2>SWP Calculator</h2>
+        <label for="swpInvestmentAmount">Investment Amount:</label>
+        <input type="text" id="swpInvestmentAmount" placeholder="Enter investment amount" value="50,00,000" oninput="this.value = formatNumberWithCommas(this.value)">
+        
+        <label for="swpRateOfInterest">Expected Rate of Return (%):</label>
+        <input type="number" id="swpRateOfInterest" placeholder="Enter rate of interest" value="12">
+        
+        <label for="swpTimePeriod">Time Period (years):</label>
+        <input type="number" id="swpTimePeriod" placeholder="Enter time period" value="10">
+
+        <label for="swpMonthlyWithdrawalAmount">Monthly Withdrawal Amount:</label>
+        <input type="text" id="swpMonthlyWithdrawalAmount" placeholder="Enter withdrawal amount" value ="25,000" oninput="this.value = formatNumberWithCommas(this.value)">
+        
+        <button onclick="calculateSWP()">Calculate</button>
+        
+        <div id="swpResult"></div>
+      </div>
+    </div>
+  </main>
+  <script src="sipScript.js"></script>
+  <footer class="footer-css">
+    <p>&copy; 2024 ZCalc. All rights reserved.</p>
+  </footer>
+</body>
+</html>
