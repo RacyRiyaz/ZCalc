@@ -55,11 +55,12 @@ function calculateLumpsum() {
     var investmentAmount = parseFloat(document.getElementById("lumsumpAmount").value.replace(/,/g, ""));
     var rateOfInterest = parseFloat(document.getElementById("rateOfInterest").value);
     var investmentPeriod = parseFloat(document.getElementById("investmentPeriod").value);
+    var invPeriod = investmentPeriod;
     var increment = 1 + rateOfInterest / 100; // Convert percentage to decimal
 
-    while (investmentPeriod > 0) {
+    while (invPeriod > 0) {
         investmentAmount *= increment; // Add interest to the investment amount
-        investmentPeriod--;
+        invPeriod--;
     }
 
     document.getElementById("lumsumpResult").innerText = "Total Amount after " + investmentPeriod + " years: ₹" + formatNumberWithCommas(investmentAmount.toFixed(2));
