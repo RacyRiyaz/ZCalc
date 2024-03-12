@@ -86,13 +86,11 @@ main {
   font-weight: bold;
 }
 
-footer.footer-css {
-  margin-block-start: 0; /* Adjust margin as needed */
-  text-align: center; /* Removed !important */
-  /* Add any other styles as needed */
-  color: black; /* Example text color */
+footer {
+  text-align: center; /* Center-align the content */
 }
-.bottom-footer {
-  font-size: 14px;
-  margin-top: 10px;
+
+.bottom-footer p {
+  font-size: 14px; /* Set the font size to 14 pixels */
 }
+
