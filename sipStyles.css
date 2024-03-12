@@ -92,3 +92,7 @@ footer.footer-css {
   /* Add any other styles as needed */
   color: black; /* Example text color */
 }
+.bottom-footer {
+  font-size: 14px;
+  margin-top: 10px;
+}
